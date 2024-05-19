@@ -11,7 +11,12 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="app" element={<AppLayout />} />
+          <Route path="app" element={<AppLayout />}>
+            <Route index element={<p>App Mian</p>} />
+            <Route path="cities" element={<p>cities section</p>} />
+            <Route path="countries" element={<p>countries section</p>} />
+            <Route path="form" element={<p>form section</p>} />
+          </Route>
           <Route path="/" element={<HomePage />} />
           <Route path="product" element={<Product />} />
           <Route path="pricing" element={<Pricing />} />
